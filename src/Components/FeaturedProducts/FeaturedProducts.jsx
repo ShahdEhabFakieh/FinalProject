@@ -60,8 +60,13 @@ export default function FeaturedProducts() {
     return axios.get(`https://ecommerce.routemisr.com/api/v1/products`);
   }
 
+  const [inputValue, setInputValue] = useState(null);
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   let { isLoading, isError, data, isFetching } = useQuery('featuredProduct', getFeaturedProduct);
-  console.log(data?.data.data);
+
 
   return <>
     {isLoading ? <div className="w-100 d-flex justify-content-center py-5">
@@ -76,34 +81,39 @@ export default function FeaturedProducts() {
         visible={true}
       />
     </div> : <div className="container py-2">
+      <div className="w-75 mx-auto py-5 mt-4">
+        <input className='form-control mb-2' name='name' id='name' placeholder='Search...' onChange={handleChange}/>
+      </div>
       <div className="row">
-        {data?.data.data.map((product) => <div key={product._id} className='col-md-2'>
+        {data?.data.data
+          .filter((product) => !inputValue || product.title.toLowerCase().includes(inputValue.toLowerCase()))
+          .map((product) => <div key={product._id} className='col-md-2'>
 
 
-          <div className="product cursor-pointer py-3 px-2">
-            <Link to={`/productdetails/${product._id}`}>
-              <img className='w-100' src={product.imageCover} alt={product.title} />
+            <div className="product cursor-pointer py-3 px-2">
+              <Link to={`/productdetails/${product._id}`}>
+                <img className='w-100' src={product.imageCover} alt={product.title} />
 
-              <span className='text-main font-sm fw-bolder'>{product.category.name}</span>
-              <h3 className='h6'>{product.title.split(" ").slice(0, 2).join(' ')}</h3>
+                <span className='text-main font-sm fw-bolder'>{product.category.name}</span>
+                <h3 className='h6'>{product.title.split(" ").slice(0, 2).join(' ')}</h3>
 
-              <div className="d-flex justify-content-between mt-3">
-                <span>{product.price} EGP</span>
+                <div className="d-flex justify-content-between mt-3">
+                  <span>{product.price} EGP</span>
 
-                <span><i className='fas fa-star rating-color'></i> {product.ratingsAverage}</span>
-              </div>
+                  <span><i className='fas fa-star rating-color'></i> {product.ratingsAverage}</span>
+                </div>
 
-            </Link>
+              </Link>
 
-            <i onClick={() => wishList?.includes(product._id) ? removeProductFromWishList(product._id) : addProductToWishList(product._id)}
-              class="fa-solid fa-heart fa-2xl" style={{ color: wishList?.includes(product._id) ? '#c91313' : '#000000' }}></i>
+              <i onClick={() => wishList?.includes(product._id) ? removeProductFromWishList(product._id) : addProductToWishList(product._id)}
+                class="fa-solid fa-heart fa-2xl" style={{ color: wishList?.includes(product._id) ? '#c91313' : '#000000' }}></i>
 
 
-            <button onClick={() => addProductToCart(product._id)} className='btn bg-main text-white w-100 btn-sm mt-2'> Add to cart</button>
+              <button onClick={() => addProductToCart(product._id)} className='btn bg-main text-white w-100 btn-sm mt-2'> Add to cart</button>
 
-          </div>
+            </div>
 
-        </div>)}
+          </div>)}
       </div>
     </div>}
 

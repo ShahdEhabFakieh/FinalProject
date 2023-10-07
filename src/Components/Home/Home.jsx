@@ -15,10 +15,7 @@ export default function Home() {
 
     <MainSlider />
     <CategorySlider />
-    <div className="w-75 mx-auto py-5 mt-4">
-
-      <input className='form-control mb-2' name='name' id='name' placeholder='Search...'></input>
-    </div>
+    
     <FeaturedProducts />
   </>
 }
