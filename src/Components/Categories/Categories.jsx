@@ -54,7 +54,7 @@ export default function Categories() {
       <div className="row mt-5">
         {subCategories.map((subcategory) => <div key={subcategory.id} className='col-md-4'>
 
-          <div className="w-25 border py-2 px-2 cursor-pointer mx-4 my-4">
+          <div className="w-100 border py-2 px-2 cursor-pointer mx-4 my-4">
 
             <h2 className='text-center'>{subcategory.name}</h2>
 

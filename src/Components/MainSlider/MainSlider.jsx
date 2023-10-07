@@ -20,8 +20,8 @@ export default function MainSlider() {
   };
 
   return <>
-    <div className="container justify-content-center">
-      <div className="row mt-6">
+    <div className="container">
+      <div className="row mt-6 d-flex justify-content-center">
         <div className="col-md-4">
         <Slider {...settings}>
           <img height={400} className='w-75' src={slide1} alt="" />

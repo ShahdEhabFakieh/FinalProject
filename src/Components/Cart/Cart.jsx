@@ -57,7 +57,7 @@ export default function Cart() {
     <div className="d-flex justify-content-between">
 
     <h3 className='fw-bolder'>Cart Shop</h3>
-    <Link to={'/address'} className='btn bg-info w-25 fw-bold'>CheckOut</Link>
+    <Link to={`/address/${cartDetails.data._id}`} className='btn bg-info w-25 fw-bold'>CheckOut</Link>
 
 
 

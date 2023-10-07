@@ -90,7 +90,7 @@ export default function FeaturedProducts() {
               <div className="d-flex justify-content-between mt-3">
                 <span>{product.price} EGP</span>
 
-                <span><i className='fas fa-star rating-color'></i> {product.ratingAverage}</span>
+                <span><i className='fas fa-star rating-color'></i> {product.ratingsAverage}</span>
               </div>
 
             </Link>

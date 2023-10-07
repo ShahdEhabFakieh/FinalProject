@@ -37,7 +37,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex justify-content-center">
 
             {userToken !== null ? <>
               <li className="nav-item">
@@ -65,14 +65,10 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li className="nav-item d-flex align-items-center">
-              <i className='fab mx-2 fa-facebook'></i>
-              <i className='fab mx-2 fa-twitter'></i>
-              <i className='fab mx-2 fa-instagram'></i>
-              <i className='fab mx-2 fa-youtube'></i>
-              <i className='fab mx-2 fa-tiktok'></i>
+              <i class="fa-solid fa-cart-shopping fa-xl"></i>
             </li>
 
-            {(cartDetails && cartDetails.numOfCartItems) && <h6>{cartDetails.numOfCartItems}</h6>}
+            {(cartDetails && cartDetails.numOfCartItems) && <h6 className='fw-bolder text-success'>{cartDetails.numOfCartItems}</h6>}
 
             {userToken !== null ? <>
               <li className="nav-item">

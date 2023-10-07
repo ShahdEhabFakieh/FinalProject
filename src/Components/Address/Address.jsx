@@ -1,17 +1,21 @@
 import React, { useContext } from 'react';
 import { useFormik } from 'formik';
 import { CartContext } from '../../Context/CartContext';
+import { useParams } from 'react-router-dom';
 
 
 
 export default function Address() {
 
+  let params = useParams()
+
   let {OnlinePayment} = useContext(CartContext)
 
 
   async function handleSubmit(values){
-   let response = await OnlinePayment('650935c445ed4b248c0ead71' , 'https://localhost:3000' , values);
+   let response = await OnlinePayment(params.id , 'https://localhost:3000' , values);
    console.log(response?.data.session.url);
+   window.location.href = response?.data.session.url;
   }
 
 

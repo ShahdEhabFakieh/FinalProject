@@ -14,7 +14,7 @@ import Navbar from './Components/Navbar/Navbar';
 import ProtectRoute from './Components/ProtectRoute/ProtectRoute';
 import WishList from './Components/WishList/WishList';
 import Address from './Components/Address/Address';
-
+import Orders from './Components/Orders/Orders';
 import FeaturedProducts from './Components/FeaturedProducts/FeaturedProducts';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import { CartContextProvider, CartContext } from './Context/CartContext';
@@ -30,7 +30,9 @@ let routers = createBrowserRouter([
       { path: 'Cart', element: <ProtectRoute><Cart /></ProtectRoute> },
       { path: 'Categories', element: <ProtectRoute><Categories /></ProtectRoute> },
       { path: 'Brands', element: <ProtectRoute><Brands /></ProtectRoute> },
-      { path: 'address', element: <ProtectRoute><Address /></ProtectRoute> },
+      { path: 'address/:id', element: <ProtectRoute><Address /></ProtectRoute> },
+      { path: 'allorders/:id', element: <ProtectRoute><Orders /></ProtectRoute> },
+
       { path: 'ProductDetails/:id', element: <ProtectRoute><ProductDetails /></ProtectRoute> },
       { path: 'Login', element: <Login /> },
       { path: 'Register', element: <Register /> },

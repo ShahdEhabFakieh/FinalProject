@@ -43,7 +43,7 @@ export function CartContextProvider(props) {
 
     function OnlinePayment(cartId , url ,values){
 
-        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}/?url=${url}` , {shippingAddress:values} , {headers})
+        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${url}` , {shippingAddress:values} , {headers})
        .then((response) => response)
             .catch((error) => error);
 

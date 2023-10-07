@@ -77,9 +77,9 @@ export default function WishList() {
             </div>
 
           </div>
-          <button onClick={() => addItemToCart(product._id)} className="trash btn p-0"> <i className='text-danger fas fa-trash fa-can'></i>Add To Cart</button>
+          <button onClick={() => addItemToCart(product._id)} className="trash btn p-2"> <i class="fa-solid fa-plus"></i> Add To Cart</button>
 
-          <button onClick={() => removeProductFromWishList(product._id)} className="trash btn p-0"> <i className='text-danger fas fa-trash fa-can'></i>Remove</button>
+          <button onClick={() => removeProductFromWishList(product._id)} className="trash btn p-2"> <i className='text-danger fas fa-trash fa-can'></i> Remove</button>
 
 
 
