@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FinalProject/static/css/main.c3918c73.css",
-    "main.js": "/FinalProject/static/js/main.bdb588a9.js",
+    "main.js": "/FinalProject/static/js/main.6e234249.js",
     "static/media/fa-solid-900.ttf": "/FinalProject/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/FinalProject/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/FinalProject/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
@@ -11,7 +11,7 @@
     "static/media/XCM_Manual_1533480_5305769_379x304_1X._SY304_CB616236518_.jpg": "/FinalProject/static/media/XCM_Manual_1533480_5305769_379x304_1X._SY304_CB616236518_.96a08320f0007d30af67.jpg",
     "static/media/XCM_Manual_1396328_4379574_Egypt_EG_BAU_GW_DC_SL_Jewelry_379x304_1X._SY304_CB650636675_.jpg": "/FinalProject/static/media/XCM_Manual_1396328_4379574_Egypt_EG_BAU_GW_DC_SL_Jewelry_379x304_1X._SY304_CB650636675_.d97d01f6b579324b1cd6.jpg",
     "static/media/XCM_Manual_1396328_4379575_Egypt_EG_BAU_GW_DC_SL_Bags_Wallets_379x304_1X._SY304_CB650636675_.jpg": "/FinalProject/static/media/XCM_Manual_1396328_4379575_Egypt_EG_BAU_GW_DC_SL_Bags_Wallets_379x304_1X._SY304_CB650636675_.941f444ea4800c7f2e40.jpg",
-    "static/media/freshcart-logo.svg": "/FinalProject/static/media/freshcart-logo.53f7a424c3aedc30a0fb46dc2278137c.svg",
+    "static/media/freshcart-logo.svg": "/FinalProject/static/media/freshcart-logo.af33f2cb2a100f447f3b8c388932e12a.svg",
     "static/media/fa-v4compatibility.ttf": "/FinalProject/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/FinalProject/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "static/media/slick.svg": "/FinalProject/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -20,10 +20,10 @@
     "static/media/slick.woff": "/FinalProject/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/FinalProject/index.html",
     "main.c3918c73.css.map": "/FinalProject/static/css/main.c3918c73.css.map",
-    "main.bdb588a9.js.map": "/FinalProject/static/js/main.bdb588a9.js.map"
+    "main.6e234249.js.map": "/FinalProject/static/js/main.6e234249.js.map"
   },
   "entrypoints": [
     "static/css/main.c3918c73.css",
-    "static/js/main.bdb588a9.js"
+    "static/js/main.6e234249.js"
   ]
 }
