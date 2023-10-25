@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useContext, useEffect } from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Home from './Components/Home/Home'
 import Products from './Components/Products/Products'
 import Cart from './Components/Cart/Cart'
@@ -21,7 +21,7 @@ import { CartContextProvider, CartContext } from './Context/CartContext';
 import { Toaster } from 'react-hot-toast';
 import { WishListContextProvider } from './Context/WishListContext';
 
-let routers = createBrowserRouter([
+let routers = createHashRouter([
   {
     path: '/', element: <Layout />, children: [
       { index: true, element: <ProtectRoute><Home /></ProtectRoute> },
